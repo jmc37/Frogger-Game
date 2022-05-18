@@ -111,3 +111,11 @@ document.getElementById('up').onclick = function () {
             frogger.x = canvas.width / 2 - frogger.width / 2;
             frogger.y = canvas.height - frogger.height - 40;
         }
+        var time_stamp = 0; // Or Date.now()
+window.addEventListener("touchstart", function(event_) {
+    if (event_.timeStamp - time_stamp < 300) { // A tap that occurs less than 300 ms from the last tap will trigger a double tap. This delay may be different between browsers.
+        event_.preventDefault();
+        return false;
+    }
+    time_stamp = event_.timeStamp;
+});
