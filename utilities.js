@@ -1,13 +1,33 @@
 function animate(){
     ctx3.clearRect(0,0, canvas.width, canvas.height)
+    ctx1.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     frogger.draw();
     frogger.update();
-    ctx1.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     handleObstacles();
     requestAnimationFrame(animate);
 }
 animate();
 
+// document.getElementById('up').onclick = function() {
+    
+//         $('38').keydown();
+//         $('38').keypress();
+//         $('38').keyup();
+//         $('38').blur();
+    
+//  }
+//  document.getElementById('down').onclick = function() {
+//     keys = [];
+//     keys[40] = true;
+//  }
+//  document.getElementById('left').onclick = function() {
+//     keys = [];
+//     keys[37] = true;
+//  }
+//  document.getElementById('right').onclick = function() {
+//     keys = [];
+//     keys[39] = true;
+//  }
 // event listeners
 window.addEventListener('keydown', function(e){
     keys = [];
