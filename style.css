@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     position: absolute;
     border: 5px solid black;
     width: 600px;
@@ -6,56 +6,77 @@
     /* transform: translate(-50%, -50%); */
     background: url('background.png');
 }
-#controller{
+
+#controller {
     width: 600px;
-    height: 500px;
-    border: 5px solid black;
-    transform: translate(0, 119%);
+    height: 300px;
+    transform: translate(0, 175%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-canvas{
+canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-#horizontal_controls{
+
+#horizontal_controls {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
-#game{
+
+#game {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-content: center;
 }
-body{
-display: flex;
-justify-content: center;}
+
+body {
+    background-color: antiquewhite;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+}
+
 /* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 150px; }
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 60px;
+}
 
 @media only screen and (max-width: 622px) {
 
-    body{
+    body {
         height: 80%;
         width: 100%;
         justify-items: center;
     }
-    #controller{
+
+    #controller {
         width: 100%;
     }
-    .wrapper{
+
+    .wrapper {
         width: 100%;
     }
-    buttons{
+
+    buttons {
         size: 100%;
     }
-  }
+}
