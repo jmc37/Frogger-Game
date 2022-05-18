@@ -29,27 +29,27 @@ function initObstacles(){
     // lane 1
     for (let i = 0; i < 2; i++){
         let x = i * 350;
-        carsArray.push(new Obstacle(x, canvas.height - grid * 2 - 20, grid * 2, grid, 10,'car'))
+        carsArray.push(new Obstacle(x, canvas.height - grid * 2 - 20, grid * 2, grid, 2,'car'))
     }
     // lane 2
     for (let i = 0; i < 2; i++){
         let x = i * 300
-        carsArray.push(new Obstacle(x, canvas.height - grid * 3 -20, grid * 2, grid,  -20, 'car'))
+        carsArray.push(new Obstacle(x, canvas.height - grid * 3 -20, grid * 2, grid,  -2, 'car'))
     }
     // lane 3
     for (let i = 0; i < 2; i++){
         let x = i * 400;
-        carsArray.push(new Obstacle(x, canvas.height - grid * 4 - 20, grid * 2, grid, 50, 'car'))
+        carsArray.push(new Obstacle(x, canvas.height - grid * 4 - 20, grid * 2, grid, 3, 'car'))
     }
     // lane 4
     for (let i = 0; i < 2; i++){
         let x = i * 400;
-        logsArray.push(new Obstacle(x, canvas.height - grid * 5 - 20, grid * 2, grid, -25, 'log'));
+        logsArray.push(new Obstacle(x, canvas.height - grid * 5 - 20, grid * 2, grid, -2, 'log'));
     }
     // lane 5
     for (let i = 0; i < 3; i++){
         let x = i * 200;
-        logsArray.push(new Obstacle(x, canvas.height - grid * 6 - 20, grid, grid, 20, 'turtle'));
+        logsArray.push(new Obstacle(x, canvas.height - grid * 6 - 20, grid, grid, 1, 'turtle'));
     }
     }
 initObstacles();
