@@ -25,7 +25,7 @@ canvas5.height = 600;
 
 // global variables
 const grid = 80;
-let keys =[];
+let keys = [];
 let score = 0;
 let collisionCount = 0;
 let frame = 0;
