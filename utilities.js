@@ -1,5 +1,5 @@
-function animate(){
-    ctx3.clearRect(0,0, canvas.width, canvas.height)
+function animate() {
+    ctx3.clearRect(0, 0, canvas.width, canvas.height)
     ctx1.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     frogger.draw();
     frogger.update();
@@ -8,44 +8,106 @@ function animate(){
 }
 animate();
 
-// document.getElementById('up').onclick = function() {
-    
-//         $('38').keydown();
-//         $('38').keypress();
-//         $('38').keyup();
-//         $('38').blur();
-    
-//  }
-//  document.getElementById('down').onclick = function() {
-//     keys = [];
-//     keys[40] = true;
-//  }
-//  document.getElementById('left').onclick = function() {
-//     keys = [];
-//     keys[37] = true;
-//  }
-//  document.getElementById('right').onclick = function() {
-//     keys = [];
-//     keys[39] = true;
-//  }
-// event listeners
-window.addEventListener('keydown', function(e){
-    keys = [];
-    keys[e.keyCode] = true;
-    if(keys[37] || keys [38] || keys[39] || keys [40]){
-        frogger.jump();
+
+document.getElementById('up').onclick = function () {
+    window.dispatchEvent(new KeyboardEvent('keydown', {
+        key: "e",
+        keyCode: 38,
+        code: "KeyE",
+        which: 38,
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false
+      }));
+      window.dispatchEvent(new KeyboardEvent('keyup', {
+        key: "e",
+        keyCode: 38,
+        code: "KeyE",
+        which: 38,
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false
+      }));
     }
-})
+    document.getElementById('left').onclick = function () {
+        window.dispatchEvent(new KeyboardEvent('keydown', {
+            key: "e",
+            keyCode: 37,
+            code: "KeyE",
+            which: 38,
+            shiftKey: false,
+            ctrlKey: false,
+            metaKey: false
+          }));
+          window.dispatchEvent(new KeyboardEvent('keyup', {
+            key: "e",
+            keyCode: 37,
+            code: "KeyE",
+            which: 38,
+            shiftKey: false,
+            ctrlKey: false,
+            metaKey: false
+          }));
+        }
+        document.getElementById('right').onclick = function () {
+            window.dispatchEvent(new KeyboardEvent('keydown', {
+                key: "e",
+                keyCode: 39,
+                code: "KeyE",
+                which: 39,
+                shiftKey: false,
+                ctrlKey: false,
+                metaKey: false
+              }));
+              window.dispatchEvent(new KeyboardEvent('keyup', {
+                key: "e",
+                keyCode: 39,
+                code: "KeyE",
+                which: 39,
+                shiftKey: false,
+                ctrlKey: false,
+                metaKey: false
+              }));
+            }
+            document.getElementById('down').onclick = function () {
+                window.dispatchEvent(new KeyboardEvent('keydown', {
+                    key: "e",
+                    keyCode: 40,
+                    code: "KeyE",
+                    which: 40,
+                    shiftKey: false,
+                    ctrlKey: false,
+                    metaKey: false
+                  }));
+                  window.dispatchEvent(new KeyboardEvent('keyup', {
+                    key: "e",
+                    keyCode: 37,
+                    code: "KeyE",
+                    which: 38,
+                    shiftKey: false,
+                    ctrlKey: false,
+                    metaKey: false
+                  }));
+                }
+     
 
-window.addEventListener('keyup', function(e){
-    delete keys[e.keycode];
-    frogger.moving = false;
-    
-});
+        window.addEventListener('keydown', function (e) {
+            keys = [];
+            keys[e.keyCode] = true;
+            if (keys[37] || keys[38] || keys[39] || keys[40]) {
+                frogger.jump();
+            }
+        })
 
-function scored(){
-    score++;
-    gameSpeed += 0.5;
-    frogger.x = canvas.width/2 - frogger.width/2;
-    frogger.y = canvas.height - frogger.height - 40;
-}
+        window.addEventListener('keyup', function (e) {
+            delete keys[e.keycode];
+            frogger.moving = false;
+
+        });
+
+        function scored() {
+            score++;
+            gameSpeed += 0.5;
+            frogger.x = canvas.width / 2 - frogger.width / 2;
+            frogger.y = canvas.height - frogger.height - 40;
+        }
