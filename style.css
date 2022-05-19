@@ -4,7 +4,7 @@
     width: 600px;
     height: 500px;
     /* transform: translate(-50%, -50%); */
-    /* background: url('background.png'); */
+    background: url('background.png');
 }
 
 #controller {
@@ -43,7 +43,7 @@ html{
 body {
     min-height: 100%;
     width: auto;
-    background-color: rgb(150, 219, 231);
+    background-color: rgb(64, 64, 238);
     margin: 0%;
     display: flex;
     flex-direction: column;

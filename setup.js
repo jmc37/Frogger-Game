@@ -43,8 +43,14 @@ const logsArray = []
 
 // images
 const background_lvl2 = new Image();
-background_lvl2.src = 'background_lvl2.png'
+background_lvl2.src = 'background.png'
 
 const penguinSprite = new Image();
 penguinSprite.src = 'penguin.png';
+
+const rectIceSprite = new Image();
+rectIceSprite.src = 'ice.png';
+
+const squareIceSprite = new Image();
+squareIceSprite.src = 'squareice.png';
 

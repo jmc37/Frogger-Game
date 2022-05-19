@@ -4,10 +4,11 @@ function animate() {
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx4.clearRect(0, 0, canvas.width, canvas.height);
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
+    ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     handleRipples();
     handleObstacles();
-    handleParticles();
-    //ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
+    //handleParticles();
+    
 
     frogger.draw();
     frogger.update();
