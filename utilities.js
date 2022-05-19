@@ -5,8 +5,8 @@ function animate() {
     ctx4.clearRect(0, 0, canvas.width, canvas.height);
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
     handleRipples();
-    handleParticles();
     handleObstacles();
+    handleParticles();
     //ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
 
     frogger.draw();
@@ -117,7 +117,7 @@ window.addEventListener('keydown', function (e) {
 })
 
 window.addEventListener('keyup', function (e) {
-    delete keys[e.keyCode];
+    delete keys[e.keycode];
     frogger.moving = false;
     frogger.frameX = 0;
 });
