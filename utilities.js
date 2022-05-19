@@ -117,7 +117,7 @@ window.addEventListener('keydown', function (e) {
 })
 
 window.addEventListener('keyup', function (e) {
-    delete keys[e.keyCode];
+    delete keys[e.keycode];
     frogger.moving = false;
     frogger.frameX = 0;
 });
