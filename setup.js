@@ -60,29 +60,30 @@ squareIceSprite.src = 'squareice.png';
 // Start Game
 function off() {
     document.getElementById("overlay").style.display = "none";
-    if (egg_count < 5){
-    var audio = document.getElementById("audio");
-          audio.play();
+    if (egg_count < 5) {
+        var audio = document.getElementById("audio");
+        audio.play();
     }
-  }
-//   Easter Egg
-$('#secret').click(function(){
-    egg_count ++;
-    console.log(egg_count)
-    if (egg_count >= 5){
-        alert("Unlocked extreme mode prepare to die")
-    background_lvl2.src = 'lavabackground.png'
-    
-    penguinSprite.src = 'penguin.png';
-    
-    rectIceSprite.src = 'lava.png';
-    
-    squareIceSprite.src = 'lavasquare.png';
-    gameSpeed = 4.5;
-    var audio = document.getElementById("audio");
-    audio.pause();
-    audio.currentTime = 0
-    var audio = document.getElementById("easter");
-          audio.play();
 }
+//   Easter Egg
+$('#secret').click(function () {
+    egg_count++;
+    console.log(egg_count)
+    if (egg_count >= 5) {
+        alert("Unlocked extreme mode prepare to die")
+        background_lvl2.src = 'lavabackground.png'
+
+        penguinSprite.src = 'penguin.png';
+
+        rectIceSprite.src = 'lava.png';
+
+        squareIceSprite.src = 'lavasquare.png';
+        document.body.style.backgroundImage = "url('doom.jpg')";
+                gameSpeed = 4.5;
+        var audio = document.getElementById("audio");
+        audio.pause();
+        audio.currentTime = 0
+        var audio = document.getElementById("easter");
+        audio.play();
+    }
 })
