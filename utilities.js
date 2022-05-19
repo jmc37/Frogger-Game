@@ -155,5 +155,5 @@ function resetGame(){
     collisionCount++;
     gameSpeed = 1;
     document.getElementById("overlay").style.display = "block";
-
+    audio.pause();
 }
