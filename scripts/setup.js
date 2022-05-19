@@ -1,3 +1,4 @@
+// Game Screens 
 const canvas = document.getElementById('canvas1');
 const ctx1 = canvas.getContext('2d');
 canvas.width = 600;
@@ -44,18 +45,17 @@ const logsArray = []
 
 // images
 const background_lvl2 = new Image();
-background_lvl2.src = 'background.png'
+background_lvl2.src = '../images/background.png'
 
 const penguinSprite = new Image();
-penguinSprite.src = 'penguin.png';
+penguinSprite.src = '../images/penguin.png';
 
 const rectIceSprite = new Image();
-rectIceSprite.src = 'ice.png';
+rectIceSprite.src = '../images/ice.png';
 
 const squareIceSprite = new Image();
-squareIceSprite.src = 'squareice.png';
+squareIceSprite.src = '../images/squareice.png';
 
-// Easter Egg Images
 
 // Start Game
 function off() {
@@ -71,14 +71,14 @@ $('#secret').click(function () {
     console.log(egg_count)
     if (egg_count >= 5) {
         alert("Unlocked extreme mode prepare to die")
-        background_lvl2.src = 'lavabackground.png'
+        background_lvl2.src = './images/lavabackground.png'
 
-        penguinSprite.src = 'penguin.png';
+        penguinSprite.src = './images/penguin.png';
 
-        rectIceSprite.src = 'lava.png';
+        rectIceSprite.src = './images/lava.png';
 
-        squareIceSprite.src = 'lavasquare.png';
-        document.body.style.backgroundImage = "url('doom.jpg')";
+        squareIceSprite.src = './images/lavasquare.png';
+        document.body.style.backgroundImage = "url('./images/doom.jpg')";
                 gameSpeed = 4.5;
         var audio = document.getElementById("audio");
         audio.pause();

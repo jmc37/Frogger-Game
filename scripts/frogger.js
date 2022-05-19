@@ -12,8 +12,8 @@ class Frogger {
         this.frameX = 0;
         this.frameY = 2;
     }
+    // Character movement
     update() {
-        // console.log('update');
         if (keys[38]) { //up 
             if (this.moving == false) {
                 this.y -= grid;
@@ -46,8 +46,6 @@ class Frogger {
         if (this.y < 0) scored();
     }
     draw() {
-        // ctx3.fillStyle = 'green';
-        // ctx3.fillRect(this.x, this.y, this.width, this.height);
         ctx3.drawImage(penguinSprite, this.frameX * this.spriteX, this.frameY * this.spriteY, this.spriteX, this.spriteY, this.x - 7, this.y - 15, this.width * 1.5, this.height * 1.5);
     }
     jump() {
