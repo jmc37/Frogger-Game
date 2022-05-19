@@ -8,13 +8,8 @@ class Obstacle{
     this.type = type
     }
     draw(){
-        if (this.type === 'turtle' || this.type === 'log'){
-            ctx1.fillStyle = 'blue';
-            ctx1.fillRect(this.x, this.y, this.width, this.height);
-        } else {
-            ctx3.fillStyle = 'blue';
-            ctx3.fillRect(this.x, this.y, this.width, this.height);
-        }
+        ctx1.fillStyle = 'blue';
+        ctx1.fillRect(this.x, this.y, this.width, this.height);
     }
     update(){
         this.x += this.speed * gameSpeed
