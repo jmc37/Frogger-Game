@@ -21,6 +21,13 @@
         <canvas id="canvas5"></canvas>
     </div>
     <div id="controller">
+        <script>
+            function play() {
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
+        </script>
+
         <input type="button" value="PLAY" onclick="play()">
         <audio id="audio" src="./music/Kendrick Lamar - We Cry Together ft. Taylour Paige (Official Audio)-[AudioTrimmer.com].mp3"></audio>
         <button id="up"><span class="material-icons md-48">arrow_upward</span></button>
