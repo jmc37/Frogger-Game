@@ -154,4 +154,6 @@ function resetGame(){
     score = 0;
     collisionCount++;
     gameSpeed = 1;
+    document.getElementById("overlay").style.display = "block";
+
 }
