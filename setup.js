@@ -55,3 +55,9 @@ rectIceSprite.src = 'ice.png';
 const squareIceSprite = new Image();
 squareIceSprite.src = 'squareice.png';
 
+// Start Game
+function off() {
+    document.getElementById("overlay").style.display = "none";
+    var audio = document.getElementById("audio");
+          audio.play();
+  }

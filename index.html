@@ -12,7 +12,11 @@
 </head>
 
 <body>
-
+  
+    <div id="overlay" onclick="off()">
+        <div id="text">Play Game</div>
+      </div>
+      
     <div class="wrapper">
         <canvas id="canvas1"></canvas>s
         <canvas id="canvas2"></canvas>
@@ -21,14 +25,6 @@
         <canvas id="canvas5"></canvas>
     </div>
     <div id="controller">
-        <script>
-            function play() {
-                var audio = document.getElementById("audio");
-                audio.play();
-            }
-        </script>
-
-        <input type="button" value="PLAY" onclick="play()">
         <audio id="audio" src="./music/Kendrick Lamar - We Cry Together ft. Taylour Paige (Official Audio)-[AudioTrimmer.com].mp3"></audio>
         <button id="up"><span class="material-icons md-48">arrow_upward</span></button>
         <div id="horizontal_controls">
