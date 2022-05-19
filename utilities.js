@@ -22,6 +22,7 @@ animate();
 
 // Emulate up button 
 document.getElementById('up').onclick = function () {
+    music = true
     window.dispatchEvent(new KeyboardEvent('keydown', {
         key: "e",
         keyCode: 38,

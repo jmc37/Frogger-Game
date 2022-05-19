@@ -12,29 +12,35 @@
 </head>
 
 <body>
-    <audio src="./music/Fluffing-a-Duck.mp3" autoplay></audio>
-    <!-- <div id="game"> -->
-        <div class="wrapper">
-            <canvas id="canvas1"></canvas>s
-            <canvas id="canvas2"></canvas>
-            <canvas id="canvas3"></canvas>
-            <canvas id="canvas4"></canvas>
-            <canvas id="canvas5"></canvas>
-        </div>
-        <div id="controller">
-            <button id="up"><span class="material-icons md-48">arrow_upward</span></button>
-            <div id="horizontal_controls">
-                <button id="left"> <span class="material-icons md-48">arrow_back</span></button>
-                <button style="visibility: hidden"> <span class="material-icons md-48">arrow_forward</span></button>
 
-                <button id="right"> <span class="material-icons md-48">arrow_forward</span></button>
-            </div>
-            <button id="down"> <span class="material-icons md-48">arrow_downward</span></button>
+    <div class="wrapper">
+        <canvas id="canvas1"></canvas>s
+        <canvas id="canvas2"></canvas>
+        <canvas id="canvas3"></canvas>
+        <canvas id="canvas4"></canvas>
+        <canvas id="canvas5"></canvas>
+    </div>
+    <div id="controller">
+        <script>
+            function play() {
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
+        </script>
+
+        <input type="button" value="PLAY" onclick="play()">
+        <audio id="audio" src="./music/Kendrick Lamar - We Cry Together ft. Taylour Paige (Official Audio)-[AudioTrimmer.com].mp3"></audio>
+        <button id="up"><span class="material-icons md-48">arrow_upward</span></button>
+        <div id="horizontal_controls">
+            <button id="left"> <span class="material-icons md-48">arrow_back</span></button>
+            <button style="visibility: hidden"> <span class="material-icons md-48">arrow_forward</span></button>
+
+            <button id="right"> <span class="material-icons md-48">arrow_forward</span></button>
+        </div>
+        <button id="down"> <span class="material-icons md-48">arrow_downward</span></button>
+
+    </div>
     
-        </div>
-    <!-- </div> -->
-   
-
     <script src="setup.js"></script>
     <script src="frogger.js"></script>
     <script src="particles.js"></script>
