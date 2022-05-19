@@ -25,6 +25,7 @@ canvas {
 }
 button{
     background-color: lightgray;
+    touch-action: manipulation;
 }
 #horizontal_controls {
     display: flex;
