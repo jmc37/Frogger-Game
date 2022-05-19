@@ -61,3 +61,11 @@ function off() {
     var audio = document.getElementById("audio");
           audio.play();
   }
+//   Easter Egg
+$('#overlay').mousedown(function(){
+    myTimeout = setTimeout(function(){ alert("Hello"); }, 5000);
+});
+
+$('#overlay').mouseup(function(){
+clearTimeout(myTimeout);
+});
