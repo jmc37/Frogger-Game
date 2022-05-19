@@ -6,12 +6,13 @@ function animate() {
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
 
     handleRipples();
+    handleObstacles();
     //ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     handleParticles();
     frogger.draw();
     frogger.update();
 
-    handleObstacles();
+
     handleScoreBoard();
     //ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);
     requestAnimationFrame(animate);
