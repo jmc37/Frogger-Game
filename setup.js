@@ -47,3 +47,4 @@ background_lvl2.src = 'background_lvl2.png'
 
 const penguinSprite = new Image();
 penguinSprite.src = 'penguin.png';
+
