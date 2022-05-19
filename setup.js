@@ -65,4 +65,5 @@ function off() {
 $('#secret').click(function(){
     egg_count ++;
     console.log(egg_count)
+    alert("jello")
 })
