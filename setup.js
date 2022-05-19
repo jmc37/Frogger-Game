@@ -33,7 +33,7 @@ let keys = [];
 let score = 0;
 let collisionCount = 0;
 let frame = 0;
-let gameSpeed = 1;
+let gameSpeed = 0.4;
 let egg_count = 0
 
 const particlesArray = [];
@@ -55,15 +55,35 @@ rectIceSprite.src = 'ice.png';
 const squareIceSprite = new Image();
 squareIceSprite.src = 'squareice.png';
 
+// Easter Egg Images
+
 // Start Game
 function off() {
     document.getElementById("overlay").style.display = "none";
+    if (egg_count < 5){
     var audio = document.getElementById("audio");
           audio.play();
+    }
   }
 //   Easter Egg
 $('#secret').click(function(){
     egg_count ++;
     console.log(egg_count)
-    alert("jello")
+    if (egg_count >= 5){
+        console.log('working')
+    
+    background_lvl2.src = 'lavabackground.png'
+    
+    penguinSprite.src = 'penguin.png';
+    
+    rectIceSprite.src = 'lava.png';
+    
+    squareIceSprite.src = 'lavasquare.png';
+    gameSpeed = 4.5;
+    var audio = document.getElementById("audio");
+    audio.pause();
+    audio.currentTime = 0
+    var audio = document.getElementById("easter");
+          audio.play();
+}
 })

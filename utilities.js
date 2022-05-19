@@ -153,7 +153,13 @@ function resetGame(){
     frogger.y = canvas.height - frogger.height - 40;
     score = 0;
     collisionCount++;
-    gameSpeed = 1;
+    if (egg_count < 5){
+    gameSpeed = 0.4;
+    }
+    else{
+        gameSpeed = 4.5;
+    }
+
     document.getElementById("overlay").style.display = "block";
     audio.pause();
 }
