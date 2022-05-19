@@ -34,7 +34,7 @@ let score = 0;
 let collisionCount = 0;
 let frame = 0;
 let gameSpeed = 1;
-let music = false;
+let egg_count = 0
 
 const particlesArray = [];
 const maxParticles = 300
@@ -62,10 +62,7 @@ function off() {
           audio.play();
   }
 //   Easter Egg
-$('#overlay').mousedown(function(){
-    myTimeout = setTimeout(function(){ alert("Hello"); }, 5000);
-});
-
-$('#overlay').mouseup(function(){
-clearTimeout(myTimeout);
-});
+$('#secret').click(function(){
+    egg_count ++;
+    console.log(egg_count)
+})

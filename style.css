@@ -77,6 +77,13 @@ body {
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
   }
+
+  #secret{
+      margin-top: 100%;
+      margin-left: 80%;
+        padding: 10px;
+        opacity: 0;
+  }
 @media only screen and (max-width: 622px) {
 
     body {
