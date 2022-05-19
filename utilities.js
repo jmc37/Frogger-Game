@@ -4,11 +4,11 @@ function animate() {
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx4.clearRect(0, 0, canvas.width, canvas.height);
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
-
     handleRipples();
+    handleParticles();
     handleObstacles();
     //ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
-    handleParticles();
+
     frogger.draw();
     frogger.update();
 
@@ -119,7 +119,7 @@ window.addEventListener('keydown', function (e) {
 window.addEventListener('keyup', function (e) {
     delete keys[e.keyCode];
     frogger.moving = false;
-
+    frogger.frameX = 0;
 });
 
 function scored() {
