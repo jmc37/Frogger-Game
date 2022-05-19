@@ -70,8 +70,7 @@ $('#secret').click(function(){
     egg_count ++;
     console.log(egg_count)
     if (egg_count >= 5){
-        console.log('working')
-    
+        alert("Unlocked extreme mode prepare to die")
     background_lvl2.src = 'lavabackground.png'
     
     penguinSprite.src = 'penguin.png';
