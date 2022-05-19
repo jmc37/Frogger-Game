@@ -100,7 +100,7 @@ document.getElementById('up').onclick = function () {
         })
 
         window.addEventListener('keyup', function (e) {
-            delete keys[e.keycode];
+            delete keys[e.keyCode];
             frogger.moving = false;
 
         });

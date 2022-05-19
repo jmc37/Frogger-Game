@@ -8,8 +8,13 @@ class Obstacle{
     this.type = type
     }
     draw(){
-        ctx1.fillStyle = 'blue'
-        ctx1.fillRect(this.x, this.y, this.width, this.height);
+        if (this.type === 'turtle' || this.type === 'log'){
+            ctx1.fillStyle = 'blue';
+            ctx1.fillRect(this.x, this.y, this.width, this.height);
+        } else {
+            ctx3.fillStyle = 'blue';
+            ctx3.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     update(){
         this.x += this.speed * gameSpeed
@@ -29,17 +34,17 @@ function initObstacles(){
     // lane 1
     for (let i = 0; i < 2; i++){
         let x = i * 350;
-        carsArray.push(new Obstacle(x, canvas.height - grid * 2 - 20, grid * 2, grid, 2,'car'))
+        logsArray.push(new Obstacle(x, canvas.height - grid * 2 - 20, grid * 2, grid, 2,'log'))
     }
     // lane 2
     for (let i = 0; i < 2; i++){
         let x = i * 300
-        carsArray.push(new Obstacle(x, canvas.height - grid * 3 -20, grid * 2, grid,  -2, 'car'))
+        logsArray.push(new Obstacle(x, canvas.height - grid * 3 -20, grid * 2, grid,  -2, 'log'))
     }
     // lane 3
     for (let i = 0; i < 2; i++){
         let x = i * 400;
-        carsArray.push(new Obstacle(x, canvas.height - grid * 4 - 20, grid * 2, grid, 3, 'car'))
+        logsArray.push(new Obstacle(x, canvas.height - grid * 4 - 20, grid * 2, grid, 3, 'log'))
     }
     // lane 4
     for (let i = 0; i < 2; i++){
@@ -62,5 +67,22 @@ function handleObstacles(){
     for(let i = 0; i < logsArray.length; i++){
         logsArray[i].update();
         logsArray[i].draw();
+    }
+
+    // collision with logs
+    if (frogger.y < 440 && frogger.y > 100){
+        safe = false;
+        for (let i = 0; i < logsArray.length; i++){
+            if (collision(frogger, logsArray[i])){
+                frogger.x += logsArray[i].speed;
+                safe = true;
+            }
+        }
+        if (!safe){
+            for (let i = 0; i < 30; i++){
+                ripplesArray.unshift(new Particle(frogger.x, frogger.y));
+            }
+            resetGame();
+        }
     }
 }
